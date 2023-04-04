@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 19:26:25 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/03 19:41:19 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/04 17:55:09 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,24 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	if (len == 0)
 		return (b);
-	if (!b)
-		return (NULL);
+	// if (!b)
+	// 	return (NULL);
 	i = 0;
 	s = (char *) b;
-	while (i < len)
-	{
-		s[i] = c;
-		i++;
-	}
+	while (len--)
+		*s++ = c;
 	return ((void *) s);
 }
 
-#include <string.h>
+// #include <string.h>
 
-int main () {
-   char str[50];
+// int main () {
+//    char str[50];
 
-   strcpy(str,"This");
-   puts(str);
+//    strcpy(str,"This");
+//    printf("%s\n",str);
 
-   memset(NULL,'$',10);
-   puts(str);
-   
-   return(0);
-}
+//    printf("%s\n",ft_memset(str,'$',2));
+//    puts(str);
+//    return(0);
+// }

@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 19:03:42 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/04 17:56:33 by jichew           ###   ########.fr       */
+/*   Created: 2023/04/04 15:24:18 by jichew            #+#    #+#             */
+/*   Updated: 2023/04/04 18:25:31 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
+void	ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+{
+	int set;
+}
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
+#include <string.h>
 
-#endif
+int main ()
+{
+   const int src[] = {1,2,3,4,5,6,7,8,9};
+   char dest[50];
+   strcpy(dest,"Heloooo!!");
+   printf("Before memcpy dest = %s\n", dest);
+   memcpy(dest, src, 9);
+   printf("After memcpy dest = %s\n", dest);
+   
+   return(0);
+}

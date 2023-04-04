@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 18:07:56 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/04 19:40:15 by jichew           ###   ########.fr       */
+/*   Created: 2023/04/04 14:42:44 by jichew            #+#    #+#             */
+/*   Updated: 2023/04/04 19:40:21 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
-int	ft_isalpha(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	ft_memset(s, 0, n);
 }
 
 // int	main(void)
 // {
-// 	int	test1;
-// 	int	test2;
-// 	int	test3;
-// 	int	test4;
+// 	char	str[50];
 
-// 	test1 = 'a';
-// 	test2 = 'Z';
-// 	test3 = '1';
-// 	test4 = '[' - 1;
-// 	printf("test1 = %d\n", ft_isalpha(test1));
-// 	printf("test2 = %d\n", ft_isalpha(test2));
-// 	printf("test3 = %d\n", ft_isalpha(test3));
-// 	printf("test4 = %d\n", ft_isalpha(test4));
+// 	strcpy(str, "This12345678910");
+// 	printf("%s\n", str);
+// 	ft_bzero(str, 4);
+// 	printf("%c\n", str[3]);
+// 	return (0);
 // }
