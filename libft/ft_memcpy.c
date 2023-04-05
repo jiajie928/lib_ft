@@ -6,27 +6,68 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 15:24:18 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/04 20:37:07 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/05 20:07:28 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int set;
+	size_t	i;
+	const char	*s;
+	char		*d;
+
+	i = 0;
+	s = (const char *)src;
+	d = (char *)dst;
+	while (n-- && ft_strlen(s))
+	{
+		d[i] = s[i];
+		i ++;
+	}
+	return ((void *)d);
 }
 
+// #include <stdio.h>
 #include <string.h>
 
-int main ()
+// struct {
+//   char name[40];
+//   int age;
+// } person, person_copy;
+
+// int main ()
+// {
+//   char myname[] = "Pierre de Fermat";
+
+//   /* using memcpy to copy string: */
+//   memcpy ( person.name, myname, strlen(myname)+1 );
+//   person.age = 46;
+
+//   /* using memcpy to copy structure: */
+//   memcpy ( &person_copy, &person, sizeof(person) );
+
+//   printf ("person_copy: %s, %d \n", person_copy.name, person_copy.age );
+
+//   return 0;
+// }
+
+int main(void)
 {
-   const char src[] = "Heloooo!!";
-   char dest[] = "Heloooo!!";
-//    strcpy(dest,"Heloooo!!");
-   printf("Before memcpy dest = %s\n", dest);
-   memcpy(dest, src, 9);
-   printf("After memcpy dest = %s\n", dest);
-   
-   return(0);
+	char ori[100] = "i am going to sleep tomorrow hehehehehhe 12314";
+    char *src = ori + 3;
+    // src = am going to sleep;
+    char *dst = ori + 6;
+    // dst = oing to sleep;
+    ft_memcpy(dst, src, 15);
+    printf("%s\n",ori);
+
+	// char ori1[100] = "i am going to sleep tomorrow hehehehehhe 12314";
+    // char *src1 = ori1 + 3;
+    // // src = am going to sleep;
+    // char *dst1 = ori1 + 5;
+    // // dst = oing to sleep;
+    // // memcpy(dst1, NULL, 15);
+    // // printf("%s",ori1);
 }
