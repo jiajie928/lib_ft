@@ -6,10 +6,13 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 17:56:56 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/05 18:20:11 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/05 21:44:30 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *
+void *	ft_memmove(void *dst, const void *src, size_t len)
+{
+
+}
