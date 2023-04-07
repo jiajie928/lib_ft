@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 18:36:10 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/07 18:45:31 by jichew           ###   ########.fr       */
+/*   Created: 2023/04/07 13:52:25 by jichew            #+#    #+#             */
+/*   Updated: 2023/04/07 19:15:00 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcpy(char *dest, const char *src, size_t dstsize)
-{
-	size_t	src_len;
-	size_t	i;
+#include "libft.h"
 
-	src_len = 0;
-	i = 0;
-	while (src[src_len])
-		src_len++;
-	if (dstsize == 0)
-		return (src_len);
-	while (src[i] && i < size -1)
-	{
-		dest[i] = src[i];
-		++i;
-	}
-	dest[i] = '\0';
-	return (src_len);
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+{
+	size_t	dest_len;
+	size_t	j;
+	size_t	src_len;
+
+	if ()
 }

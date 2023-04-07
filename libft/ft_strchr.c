@@ -1,31 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 18:36:10 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/07 18:45:31 by jichew           ###   ########.fr       */
+/*   Created: 2023/04/07 20:21:23 by jichew            #+#    #+#             */
+/*   Updated: 2023/04/07 23:29:46 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcpy(char *dest, const char *src, size_t dstsize)
-{
-	size_t	src_len;
-	size_t	i;
+#include "libft.h"
 
-	src_len = 0;
+char	*ft_strchr(const char *s, int c)
+{
+	int		i;
+	char	*src;
+
+	src = (char *)s;
 	i = 0;
-	while (src[src_len])
-		src_len++;
-	if (dstsize == 0)
-		return (src_len);
-	while (src[i] && i < size -1)
+	while (i <= ft_strlen(s))
 	{
-		dest[i] = src[i];
-		++i;
+		if (c == src[i])
+			break ;
+		i++;
 	}
-	dest[i] = '\0';
-	return (src_len);
+	return (src + i);
+}	
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+   const char str[80]; 
+   const char ch; 
+   char *p;
+   p = strchr(str, ch);
+   printf("%d\n", *p);
+
+   char *q;
+   q = ft_strchr(str, ch);
+   printf("%d\n", *q);
+   return 0;
 }
