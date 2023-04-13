@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 15:24:18 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/07 20:05:09 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/13 18:47:14 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return ((void *)d);
 }
 
-// #include <stdio.h>
-#include <string.h>
 
 // struct {
 //   char name[40];
@@ -55,20 +53,20 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 int main(void)
 {
-	char ori[100] = "i am going to sleep tomorrow hehehehehhe 12314";
-    char *src = ori + 3;
-    // src = am going to sleep;
-    char *dst = ori + 5;
-    // dst = oing to sleep;
-    // ft_memcpy(dst, src, 15);
-    printf("%s\n",ft_memcpy(dst, src, 15));
+	// char ori[100] = "i am going to sleep tomorrow hehehehehhe 12314";
+    // char *src = ori + 3;
+    // // src = am going to sleep;
+    // char *dst = ori + 5;
+    // // dst = oing to sleep;
+    // // ft_memcpy(dst, src, 15);
+    // printf("%s\n",ft_memcpy(dst, src, 15));
 
 	char ori1[100] = "i am going to sleep tomorrow hehehehehhe 12314";
-    char *src1 = ori1 + 3;
+    char *src1;
     // src = am going to sleep;
-    char *dst1 = ori1 + 5;
+    char *dst1;
     // dst = oing to sleep;
     // memcpy(dst1, src1, 15);
-    printf("%s", memcpy(dst1, src1, 15));
+    printf("%s", ft_memcpy(dst1, src1, 15));
 }
 	
