@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 17:56:56 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/13 18:47:17 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/14 21:54:02 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void *	ft_memmove(void *dst, const void *src, size_t len)
 {
+	size_t i;
 
+	i = 0;
+	while (dst <= i)
 }

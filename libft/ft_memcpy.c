@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 15:24:18 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/13 18:47:14 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/14 21:54:04 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 }
 
 
-// struct {
-//   char name[40];
-//   int age;
-// } person, person_copy;
+struct {
+  char name[40];
+  int age;
+} person, person_copy;
 
-// int main ()
-// {
+int main ()
+{
 //   char myname[] = "Pierre de Fermat";
 
 //   /* using memcpy to copy string: */
@@ -51,22 +51,21 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 //   return 0;
 // }
 
-int main(void)
-{
-	// char ori[100] = "i am going to sleep tomorrow hehehehehhe 12314";
-    // char *src = ori + 3;
-    // // src = am going to sleep;
-    // char *dst = ori + 5;
-    // // dst = oing to sleep;
-    // // ft_memcpy(dst, src, 15);
-    // printf("%s\n",ft_memcpy(dst, src, 15));
-
-	char ori1[100] = "i am going to sleep tomorrow hehehehehhe 12314";
-    char *src1;
+	char ori[100] = "i am going to sleep tomorrow hehehehehhe 12314";
+    char *src = ori;
     // src = am going to sleep;
-    char *dst1;
+	printf("%s\n", src);
+    char *dst = ori + 3;
     // dst = oing to sleep;
-    // memcpy(dst1, src1, 15);
-    printf("%s", ft_memcpy(dst1, src1, 15));
+	printf("%s\n", dst);
+    printf("%s\n",memcpy(dst, src, 5));
+
+// 	char ori1[100] = "i am going to sleep tomorrow hehehehehhe 12314";
+//     char *src1;
+//     // src = am going to sleep;
+//     char *dst1;
+//     // dst = oing to sleep;
+//     memcpy(dst1, src1, 15);
+//     printf("%s", ft_memcpy(dst1, src1, 15));
 }
 	
