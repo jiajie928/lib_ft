@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/19 10:22:49 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/19 15:19:27 by jichew           ###   ########.fr       */
+/*   Created: 2023/04/19 18:08:43 by jichew            #+#    #+#             */
+/*   Updated: 2023/04/19 21:56:29 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;
-	unsigned char *str;
+	int	i;
+	int	fail;
 
-	str = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (str[i] == (unsigned char)c)
-			return (str + i);
-		i++;
-	}
-	return (NULL);
+	if (!*needle)
+		return ((char *)haystack);
+	// while (*haystack != '\0')
+
+	return((char *)needle);
+	
 }
 
-int main () {
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = '.';
-   char *ret;
+int main(void)
+{
+	const char *largestring;
+	const char *smallstring;
+	char *ptr;
 
-   ret = memchr(str, ch, 40);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-
-   return(0);
+    ptr = strnstr(largestring, smallstring, 10);
+	printf("%s\n", ptr);
 }

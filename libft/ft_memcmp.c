@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/19 10:22:49 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/19 15:19:27 by jichew           ###   ########.fr       */
+/*   Created: 2023/04/19 15:21:15 by jichew            #+#    #+#             */
+/*   Updated: 2023/04/19 18:08:19 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	unsigned char *str;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	str = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while (i < n && str1[i] && str2[i])
 	{
-		if (str[i] == (unsigned char)c)
-			return (str + i);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
-int main () {
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = '.';
-   char *ret;
+int main(void)
+{
+	char *s1 = "jiajie";
+	char *s2 = "jie";
 
-   ret = memchr(str, ch, 40);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-
-   return(0);
+	printf("%d\n", ft_memcmp(s1,s2,5));
+	printf("a - e = %d", 'a' - 'e');
+	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:59:12 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/19 10:21:15 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/19 14:10:22 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
@@ -23,4 +23,12 @@ char	*strrchr(const char *s, int c)
 			return ((char *) &s[i]);
 	}
 	return (NULL);
+}
+
+int main(void)
+{
+	char const arrr[] = "bonjour";
+
+	printf("%s\n", ft_strrchr(arrr, 'o'));
+	return (0);
 }
