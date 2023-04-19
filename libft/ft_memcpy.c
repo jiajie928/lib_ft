@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 15:24:18 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/14 21:54:04 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/19 01:09:24 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,12 @@ int main ()
 //   return 0;
 // }
 
-	char ori[100] = "i am going to sleep tomorrow hehehehehhe 12314";
-    char *src = ori;
+	int ori[100] = {1,2,3,4,5,6,7,8,9,10};
+    int *src = ori;
     // src = am going to sleep;
-	printf("%s\n", src);
-    char *dst = ori + 3;
+	for (int i = 0; i < 0; i++)
+		printf("destination[%d] = %d\n", i, destinationsrc);
+    int *dst = ori + 3;
     // dst = oing to sleep;
 	printf("%s\n", dst);
     printf("%s\n",memcpy(dst, src, 5));
