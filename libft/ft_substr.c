@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 19:44:11 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/20 20:14:29 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/21 18:40:10 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-
+	
 }
