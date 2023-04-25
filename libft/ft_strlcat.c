@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:52:25 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/12 16:56:56 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/25 17:37:50 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,21 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	return (dest_len + src_len);
 }
 
-int	main(void)
-{
-	char	dst[20] = "0123456789";
-	char	src[20] = "qwertyuiop";
+// int	main(void)
+// {
+// 	char	dst[20] = "0123456789";
+// 	char	src[20] = "qwertyuiop";
 
-	printf("before :\nsrc = %s\ndst = %s\n", src, dst);
-	strlcat(dst, src, 10);
-	printf("\n\nafter :\nsrc = %s\ndst = %s\n", src, dst);
-	printf("dst");
+// 	printf("before :\nsrc = %s\ndst = %s\n", src, dst);
+// 	strlcat(dst, src, 10);
+// 	printf("\n\nafter :\nsrc = %s\ndst = %s\n", src, dst);
+// 	printf("dst");
 
-	char d[] = "0123456789";
-	char s[] = "qwertyuiop";
-	printf("\nbefore :\nsrc = %s\ndst = %s\n", s, d);
-	ft_strlcat(dst, src, 20);
-	printf("\n\nafter :\nsrc = %s\ndst = %s\n", s, d);
-	printf("dst");
-	return (0);
-}
+// 	char d[] = "0123456789";
+// 	char s[] = "qwertyuiop";
+// 	printf("\nbefore :\nsrc = %s\ndst = %s\n", s, d);
+// 	ft_strlcat(dst, src, 20);
+// 	printf("\n\nafter :\nsrc = %s\ndst = %s\n", s, d);
+// 	printf("dst");
+// 	return (0);
+// }
