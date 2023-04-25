@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 20:21:23 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/14 19:30:21 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/22 02:29:06 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ char	*ft_strchr(const char *s, int c)
 
 int main ()
 {
-   const char str[100] =  "http://www.tutorialspoint.com"; 
-   const char ch = '.'; 
+   const char str[100] =  "http://www.tutorialspoint.com";
+   const char ch = '.';
    char *p = strchr(str, ch);
    printf("%s\n", p);
 

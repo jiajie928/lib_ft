@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 17:31:05 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/20 19:27:46 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/22 01:22:30 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(p, count * size);
 	return (p);
 }
-
