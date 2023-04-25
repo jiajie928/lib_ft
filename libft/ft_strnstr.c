@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 18:08:43 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/22 02:21:03 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/26 02:37:33 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-int main(void)
-{
-	const char *largestring = "haystack";
-	const char *smallstring = "stack";
-	char *ptr;
+// int main(void)
+// {
+// 	const char *largestring = "haystack";
+// 	const char *smallstring = "stack";
+// 	char *ptr;
 
-    ptr = strnstr(largestring, smallstring, 8);
-	printf("%s\n", ptr);
-}
+//     ptr = strnstr(largestring, smallstring, 8);
+// 	printf("%s\n", ptr);
+// }

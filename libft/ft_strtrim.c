@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 18:59:12 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/26 02:34:20 by jichew           ###   ########.fr       */
+/*   Created: 2023/04/26 02:30:35 by jichew            #+#    #+#             */
+/*   Updated: 2023/04/26 02:41:03 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-
-	i = ft_strlen(s);
-	while (i--)
-	{
-		if (s[i] == (unsigned char) c)
-			return ((char *) &s[i]);
-	}
-	return (NULL);
+	if (!s1)
+		return (NULL);
+	
 }
-
-// int main(void)
-// {
-// 	char const arrr[] = "bonjour";
-
-// 	printf("%s\n", ft_strrchr(arrr, 'o'));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 14:15:17 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/20 17:32:11 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/26 02:38:01 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 	return (total * sign);
 }
 
-int main(void)
-{
-	printf("%d", ft_atoi("2147483648"));
-}
+// int main(void)
+// {
+// 	printf("%d", ft_atoi("2147483648"));
+// }
