@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strtrim.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/28 15:54:01 by jichew            #+#    #+#             */
+/*   Updated: 2023/04/28 16:02:39 by jichew           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	check_set(char me, char const *set)
@@ -52,8 +64,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 int main(void)
 {
-	char s1[] = "\t\n\n\n\n\n\tHello \tPlease\nTrim me !\t\t\t\n\t\t\t\t";
-	char s2[] = " \n\t";
+	char s1[] = "\tHello \tPlease Trim me !";
+	char s2[] = "e";
 	printf("%s\n%d",ft_strtrim(s1, s2), get_actual_len(s1, s2));
 	return (0);
 }
