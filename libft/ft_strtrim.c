@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 02:30:35 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/26 02:41:03 by jichew           ###   ########.fr       */
+/*   Updated: 2023/04/28 19:19:23 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	
+	
 }
+
