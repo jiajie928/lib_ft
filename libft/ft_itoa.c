@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 16:56:40 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/22 21:27:02 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/22 21:30:30 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int	get_size(int n)
 	else if (n < 0)
 	{
 		n *= -1;
-		size ++;
+		size++;
 	}
 	while (n > 0)
 	{
 		n / 10;
-		i++;
+		size++;
 	}
 	return (size);
 }
