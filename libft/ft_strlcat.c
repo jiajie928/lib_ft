@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:52:25 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/25 17:37:50 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/22 16:08:12 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	i = 0;
 	while (src[i] && i < dstsize - dest_len - 1)
 	{
-		dest[dest_len + i] =src[i];
+		dest[dest_len + i] = src[i];
 		i ++;
 	}
 	dest[dest_len + i] = '\0';

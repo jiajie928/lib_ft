@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 02:30:35 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/19 22:46:35 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/22 15:59:37 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trimstr;
 	int		len;
 	int		i;
-	
+
 	if (!s1 || !set)
 		return (NULL);
 	len = trimlen(s1, set);
@@ -51,21 +51,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!trimstr)
 		return (NULL);
 	i = 0;
-	while  (is_set(*s1, set) && s1)
+	while (is_set(*s1, set) && s1)
 		s1++;
 	while (len - 1 > 0)
 	{
 		trimstr[i++] = *s1++;
-		len--;	
+		len--;
 	}
 	trimstr [i] = '\0';
 	return (trimstr);
 }
 
-int main (void)
-{
-	char s1[] = "Hello \t Please Trim meeeee ";
-	char s2[] = "\t He";
-	printf("%s\n%d", ft_strtrim(s1,s2), trimlen(s1,s2));
-	return (0);
-}
+// int main (void)
+// {
+// 	char s1[] = "Hello \t Please Trim meeeee ";
+// 	char s2[] = "\t He";
+// 	printf("%s\n%d", ft_strtrim(s1,s2), trimlen(s1,s2));
+// 	return (0);
+// }

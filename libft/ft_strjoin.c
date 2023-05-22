@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:48:39 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/19 22:45:48 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/22 16:07:34 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*sj;
 	int		len;
 	int		i;
-	int 	j;
-	
+	int		j;
+
 	len = ft_strlen(s1) + ft_strlen(s2);
 	sj = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!sj)

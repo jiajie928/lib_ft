@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 19:44:11 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/25 17:48:20 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/22 15:59:55 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-int main(void)
-{
-	printf("%s", ft_substr("iMac & iPad", 9, 5));
-	return (0);
-}
+// int main(void)
+// {
+// 	printf("%s", ft_substr("iMac & iPad", 9, 5));
+// 	return (0);
+// }

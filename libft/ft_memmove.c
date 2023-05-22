@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 17:56:56 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/19 13:47:43 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/22 15:57:56 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return ((void *)dst);
 }
 
+/*
 int main(void)
 {
 	char ori[] = "i am going to sleep";
@@ -49,3 +50,4 @@ int main(void)
 	// 	n--;
 	// return (d);
 }
+*/
