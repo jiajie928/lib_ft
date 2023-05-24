@@ -2,7 +2,7 @@ NAME			=	libft.a
 SRCS_DIR		=	libft/
 OBJS_DIR		=	objs/
 FILES			=	ft_bzero ft_isalnum ft_memset ft_isalpha ft_calloc ft_strlen\
-					ft_strlcat
+					ft_strlcat ft_itoa
 SRCS			=	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 OBJS			=	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 GCC				=	gcc
