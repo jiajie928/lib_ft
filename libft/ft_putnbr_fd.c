@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 21:11:57 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/25 12:18:05 by jichew           ###   ########.fr       */
+/*   Created: 2023/05/26 12:08:51 by jichew            #+#    #+#             */
+/*   Updated: 2023/05/26 13:55:06 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putnbr_fd(int n, int fd)
 {
-	char			*tmp;
-	unsigned int	i;
+	char	nb;
 
-	if (!s || !f)
-		return (NULL);
-	i = 0;
-	tmp = (char *) ft_calloc (ft_strlen(s) + 1, sizeof(char));
-	if (!tmp)
-		return (NULL);
-	while (s[i])
+	if (fd < 0)
+		return ;
+	if (n == -2147483648)
 	{
-		tmp[i] = f(i, s[i]);
-		i++;
+		write (fd, "-2147483648", 11);
+		return ;
 	}
-	return (tmp);
+	else if (n < 0)
+	{
+		write (fd, "-", 1);
+		n = -n;
+	}
+	if (n / 10 > 0)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		nb = n % 10 + '0';
+		write (fd, &nb, 1);
+	}
+	else
+	{
+		nb = n % 10 + '0';
+		write (fd, &nb, 1);
+	}
 }

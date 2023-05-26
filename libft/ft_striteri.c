@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 21:11:57 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/25 12:18:05 by jichew           ###   ########.fr       */
+/*   Created: 2023/05/25 11:52:58 by jichew            #+#    #+#             */
+/*   Updated: 2023/05/25 12:32:51 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	testing_01(unsigned int i, char *address)
 {
-	char			*tmp;
+	*address += i;
+}
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
 	unsigned int	i;
 
 	if (!s || !f)
-		return (NULL);
+		return ;
 	i = 0;
-	tmp = (char *) ft_calloc (ft_strlen(s) + 1, sizeof(char));
-	if (!tmp)
-		return (NULL);
 	while (s[i])
 	{
-		tmp[i] = f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
-	return (tmp);
+}
+
+
+
+int main(void)
+{
+	char	str[] = "abcdefghijkl";
+	printf("before : %s\n", str);
+	ft_striteri(str, testing_01);
+	printf("after : %s\n", str);
+	return (0);
 }
