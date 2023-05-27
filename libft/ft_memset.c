@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 19:26:25 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/24 12:14:28 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/26 19:35:45 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
-	char	*s;
+	size_t			i;
+	char			*s;
 	unsigned char	cc;
 
-	if (len == 0)
-		return (b);
-	if (!b)
-		return (NULL);
 	i = 0;
 	s = b;
 	cc = c;
@@ -30,6 +26,7 @@ void	*ft_memset(void *b, int c, size_t len)
 		s[i] = cc;
 		i++;
 	}
+	return ((void *) s);
 }
 
 // int main(void)

@@ -6,24 +6,21 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 16:56:40 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/24 01:12:27 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/27 17:50:05 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_size(int n)
+static int	get_size(int n)
 {
 	int	size;
 
-	size = 1;
+	size = 0;
 	if (n == 0)
 		return (2);
 	if (n == -2147483648)
-	{
-		n == 214748364;
-		size += 2;
-	}
+		return (12);
 	else if (n < 0)
 	{
 		n *= -1;
@@ -31,10 +28,10 @@ int	get_size(int n)
 	}
 	while (n > 0)
 	{
-		n / 10;
+		n /= 10;
 		size++;
 	}
-	return (size);
+	return (size + 1);
 }
 
 static void	move_in(char *str, int n)
@@ -43,17 +40,18 @@ static void	move_in(char *str, int n)
 
 	i = get_size(n) - 2;
 	if (n == 0)
-		str [0] = '0';
+		str[0] = '0';
 	if (n == -2147483648)
 	{
 		str[0] = '-';
 		str[i] = '8';
+		n = 214748364;
 		i--;
 	}
 	else if (n < 0)
 	{
 		str[0] = '-';
-		n -= n;
+		n = -n;
 	}
 	while (n > 0)
 	{
@@ -67,17 +65,18 @@ char	*ft_itoa(int n)
 {
 	char	*toa;
 
-	toa = calloc(get_size(n), sizeof(char));
+	toa = ft_calloc(get_size(n), sizeof(char));
 	if (!toa)
 		return (NULL);
-	move_in(toa, n);
+	else
+		move_in(toa, n);
 	return (toa);
 }
 
-int main (void)
-{
-	int i;
-	i = 2147483647;
+// int main (void)
+// {
+// 	int i;
+// 	i = 2147483647;
 
-	printf("%s", ft_itoa(2147483647));
-}
+// 	printf("%s", ft_itoa(2147483647));
+// }

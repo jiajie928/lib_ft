@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 17:56:56 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/22 15:57:56 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/26 19:48:02 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,45 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (!dst && !src)
+	char	*s;
+	char	*d;
+	size_t	i;
+
+	s = (char *)src;
+	d = (char *)dst;
+	if (!s && !d)
 		return (NULL);
-	if (src <= dst)
+	i = 0;
+	if (d > s)
+		while (len-- > 0)
+			d[len] = s[len];
+	else
 	{
-		while (len)
+		while (i < len)
 		{
-			*(char *)(dst + len - 1) = *(char *)(src + len - 1);
-			len--;
+			d[i] = s[i];
+			i++;
 		}
 	}
-	else
-		ft_memcpy(dst, src, len);
-	return ((void *)dst);
+	return (dst);
 }
+
+// void	*ft_memmove(void *dst, const void *src, size_t len)
+// {
+// 	if (!dst && !src)
+// 		return (NULL);
+// 	if (src <= dst)
+// 	{
+// 		while (len)
+// 		{
+// 			*(char *)(dst + len - 1) = *(char *)(src + len - 1);
+// 			len--;
+// 		}
+// 	}
+// 	else
+// 		ft_memcpy(dst, src, len);
+// 	return ((void *)dst);
+// }
 
 /*
 int main(void)

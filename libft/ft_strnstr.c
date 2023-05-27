@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 18:08:43 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/26 02:37:33 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/26 20:06:25 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	fail;
+	size_t	i;
+	size_t	fail;
 
 	if (!*needle)
 		return ((char *)haystack);
 	i = 0;
-	while (*haystack && i < len)
+	while (i < len && *haystack)
 	{
 		fail = 0;
-		while (haystack[fail] == needle[fail])
+		while (haystack[fail] == needle[fail] && needle[fail] && haystack[fail])
 		{
 			if (fail + i > len - 1)
 				break ;

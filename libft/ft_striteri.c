@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 11:52:58 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/25 12:32:51 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/26 15:54:47 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-
-
-int main(void)
-{
-	char	str[] = "abcdefghijkl";
-	printf("before : %s\n", str);
-	ft_striteri(str, testing_01);
-	printf("after : %s\n", str);
-	return (0);
-}
+// int main(void)
+// {
+// 	char	str[] = "abcdefghijkl";
+// 	printf("before : %s\n", str);
+// 	ft_striteri(str, testing_01);
+// 	printf("after : %s\n", str);
+// 	return (0);
+// }

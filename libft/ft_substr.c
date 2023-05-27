@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 19:44:11 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/22 15:59:55 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/27 18:02:56 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_calloc(1, sizeof(char)));
+	if (len > (size_t)ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	substr = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!substr)
 		return (NULL);

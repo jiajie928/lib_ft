@@ -6,11 +6,11 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 18:53:50 by jichew            #+#    #+#             */
-/*   Updated: 2023/04/07 19:14:29 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/26 19:13:09 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);

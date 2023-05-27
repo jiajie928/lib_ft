@@ -6,7 +6,7 @@
 /*   By: jichew <jichew@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 15:24:18 by jichew            #+#    #+#             */
-/*   Updated: 2023/05/22 15:57:14 by jichew           ###   ########.fr       */
+/*   Updated: 2023/05/27 18:11:46 by jichew           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const char	*s;
 	char		*d;
 
+	if (!dst && !src)
+		return (NULL);
 	i = 0;
 	s = (char *)src;
 	d = (char *)dst;
-	while (i < n && *s)
+	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
