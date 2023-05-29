@@ -1,5 +1,5 @@
 NAME			=	libft.a
-SRCS_DIR		=	libft/
+SRCS_DIR		=	./
 OBJS_DIR		=	objs/
 FILES			=	ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint ft_strlen \
 					ft_memset ft_bzero ft_memcpy ft_strlcpy ft_strlcat ft_toupper \
@@ -38,7 +38,7 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
+re: fclean all 
+
 norm:
 	norminette -R CheckForbiddenSourceHeader $(SRCS) libft/libft.h
-
-re: fclean all 
